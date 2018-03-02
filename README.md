@@ -1,3 +1,4 @@
+
 Google Display Network is a collection of websites, including specific Google websites like Google Finance, Gmail, Blogger and YouTube, which show AdWords ads. Using either a DoubleClick Bid Manager (DBM) account or an AdWords account with an account manager, you can target “User Lists” of specific users for particular AdWords campaigns, matched by their Google IDs.
 
 The two biggest challenges with effectively using Google user lists for customer retention are (1) deciding which customers to include in each User List, and (2) updating the various User Lists on a frequent basis.
@@ -7,7 +8,31 @@ Optimove addresses both of these challenges as part of its core functions: the s
 ## **Getting Started**
 To use Google Display Network as a campaign channel within Optimove, you need to perform the following steps:
 
-### **Approve Optimove as a User List Provider**
+### **Enabling GDN with Optimove SDK**
+In order to use Optimove to automate AdWords campaigns, you need to link, or "match," Google Customer IDs with Optimove Customer IDs and/or Visitor IDs using [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide). Just follow the steps below to get started:
+
+1. Request [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) from your CSM or Optimove point of contact and send them the following information:
+	1.2. Approving Optimove as a User List Provider (See below)
+	1.3. Getting your AdWords/DBM Account Details (see below)
+3. Once the Product Integration team receives the request with #1 details above, they will send you your SDK details for implementation
+4. Add the [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) to your code with the details the Product Integration team sent you
+5. Call `optimoveSDK.initialize()` function to initialize the SDK
+6. Call `optimoveSDK.API.setPageVisit()` function to report page visits
+7. Call `optimoveSDK.API.setUserID()` in order to link/stitch visitor to customerID for Optimove campaigns
+
+**Note**:
+* Use the [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) guide to see detailed information on the above functions
+* Optimove SDK supports both [Web](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) and Mobile Native Apps ([Android](https://docs.optimove.com/optimove-sdk/#Android_SDK)/ [iOS](https://docs.optimove.com/optimove-sdk/#iOS_SDK_Swift))
+* Cookie matching for website visitors (non-registered users/customers) is only available if you implement [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide).
+
+**Technical explanation**
+* The functions above sets a cookie for each site visitor containing your Customer ID or Visitor ID, under the Google Cookie Matching service domain. 
+* It also sends a pixel request to the specified Google domain, receiving in return a redirect request to the Optimove’s cookie matching service, containing the Google ID of the customer. 
+* This allows Optimove to match the Google ID received with your existing Customer ID or assigned Visitor ID, thus identifying the customer/visitor within the Optimove data warehouse.
+
+----------
+
+### **Approving Optimove as a User List Provider**
 To get started, Optimove must be approved as a User List Provider in your AdWords or DBM account with one of the following permission types:
 
 * INVITE_ADVERTISER – User List Provider for a specific brand in your DBM account
@@ -18,30 +43,11 @@ In order to approve Optimove as a User List Provider with one of the above permi
 
 Once this request is passed on to Google, they will connect the Optimove account to your AdWords or DBM account, so that Optimove will be able to create new User Lists and to populate them with customer or visitor IDs.
 
-### **Enabling GDN with Optimove SDK**
-In order to use Optimove to automate AdWords campaigns, you need to link, or "match," Google Customer IDs with Optimove Customer IDs and/or Visitor IDs using [Optimove SDK](https://docs.optimove.com/optimove-sdk/). Just follow the steps below to get started:
-
-1. Request [Optimove SDK](https://docs.optimove.com/optimove-sdk/) from your CSM or Optimove point of contact
-2. Provide your AdWords/DBM Account Details to Optimove CSM or Point of Contact
+### **Getting your AdWords/DBM Account Details**
 In order to connect your Optimove site to the relevant Google account, you need to provide the following information (which Google will provide you) to the Optimove Product Integration team:
 * The ClientCustomerID for the Google DMP User List API
 * The type of User List Provider assigned to Optimove by Google
 Note: If you wish to use multiple Google accounts with Optimove, you will need to provide to the Optimove Product Integration team the ClientCustomerID and User List Provider type for each account.
-3. Once the Product Integration team receives the request with #2 above, they will send you your SDK details for implmentation
-4. Add the [Optimove SDK](https://docs.optimove.com/optimove-sdk/) to your code with the details the Product Integration team sent you
-5. Call `optimoveSDK.initialize()` function to initialize the SDK
-6. Call `optimoveSDK.API.setPageVisit()` function to report page visits
-7. Call `optimoveSDK.API.setUserID()` in order to link/stitch visitor to customerID for Optimove campaigns
-
-**Note**:
-* Use the [Optimove SDK](https://docs.optimove.com/optimove-sdk/) guide to see detailed information on the above functions
-* Optimove SDK supports both [Web](https://docs.optimove.com/optimove-sdk/#Website_SDK) and Mobile Native Apps ([Android](https://docs.optimove.com/optimove-sdk/#Android_SDK)/ [iOS](https://docs.optimove.com/optimove-sdk/#iOS_SDK_Swift))
-* Cookie matching for website visitors (non-registered users/customers) is only available if you implement [Optimove SDK](https://docs.optimove.com/optimove-sdk/).
-
-**Technical explanation**
-* The script above sets a cookie for each site visitor containing your Customer ID or Visitor ID, under the Google Cookie Matching service domain. 
-* It also sends a pixel request to the specified Google domain, receiving in return a redirect request to the Optimove’s cookie matching service, containing the Google ID of the customer. 
-* This allows Optimove to match the Google ID received with your existing Customer ID or assigned Visitor ID, thus identifying the customer/visitor within the Optimove data warehouse.
 
 ### **Create User Lists**
 Optimove will automatically create a set of preconfigured User Lists in your connected AdWords or DBM account. If you require the creation of additional User Lists, contact the Optimove integration team. Note that User Lists become active approximately 24 hours after creation.
