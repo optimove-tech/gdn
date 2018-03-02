@@ -5,6 +5,8 @@ The two biggest challenges with effectively using Google user lists for customer
 
 Optimove addresses both of these challenges as part of its core functions: the software allows marketers to identify and manage large numbers of highly-targeted micro-segments (target groups) of customers or website visitors and automatically handles updating the customer or visitor IDs contained in each User List, every day. Updating the User Lists daily maximizes the response rates of customers by always targeting customers with the most relevant messages and incentives, given each customer’s most recent actions and behaviors.
 
+----------
+
 ## **Getting Started**
 To use Google Display Network as a campaign channel within Optimove, you need to perform the following steps:
 
