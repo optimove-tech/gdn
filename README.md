@@ -14,8 +14,8 @@ To use Google Display Network as a campaign channel within Optimove, you need to
 In order to use Optimove to automate AdWords campaigns, you need to link, or "match," Google Customer IDs with Optimove Customer IDs and/or Visitor IDs using [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide). Just follow the steps below to get started:
 
 1. Request [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) from your CSM or Optimove point of contact and send them the following information:
-	1.2. Approving Optimove as a User List Provider (See below)
-	1.3. Getting your AdWords/DBM Account Details (see below)
+	<br/>1.2. Approving Optimove as a User List Provider (See below)
+	<br/>1.3. Getting your AdWords/DBM Account Details (see below)
 3. Once the Product Integration team receives the request with #1 details above, they will send you your SDK details for implementation
 4. Add the [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) to your code with the details the Product Integration team sent you
 5. Call `optimoveSDK.initialize()` function to initialize the SDK
