@@ -8,7 +8,7 @@
 	- [Schedule Your First Google Display Network Campaign](#first-campaign) 
 	- [Set up the Campaign in Google](#google-campaign) 
 
-Google Display Network is a collection of websites, including specific Google websites like Google Finance, Gmail, Blogger and YouTube, which show AdWords ads. Using either a DoubleClick Bid Manager (DBM) account or an AdWords account with an account manager, you can target “User Lists” of specific users for particular AdWords campaigns, matched by their Google IDs.
+<a id="intro"></a>Google Display Network is a collection of websites, including specific Google websites like Google Finance, Gmail, Blogger and YouTube, which show AdWords ads. Using either a DoubleClick Bid Manager (DBM) account or an AdWords account with an account manager, you can target “User Lists” of specific users for particular AdWords campaigns, matched by their Google IDs.
 
 The two biggest challenges with effectively using Google user lists for customer retention are (1) deciding which customers to include in each User List, and (2) updating the various User Lists on a frequent basis.
 
@@ -71,7 +71,7 @@ Optimove will automatically create a set of preconfigured User Lists in your con
 Once the above steps have been completed, you are ready to run your first Google Display Network campaign: select the “Google Display Network” channel when scheduling a campaign and select the appropriate User List from the drop-down list that appears. In the next step, you will need to associate the User List you selected here with a relevant campaign.
 ![Schedule Your First Google Display Network Campaign](https://docs.optimove.com/wp-content/uploads/2017/03/word-image-37.png)
 
-<a id="intro"></a>From this point on, Optimove will automatically populate the selected Google User List with the customer or visitor IDs included in the selected target group, updated daily. When the campaign’s measurement period concludes, Optimove will remove all IDs from the list.
+From this point on, Optimove will automatically populate the selected Google User List with the customer or visitor IDs included in the selected target group, updated daily. When the campaign’s measurement period concludes, Optimove will remove all IDs from the list.
 
 Note that Optimove will only populate the User List with IDs that were already matched, by the above script, with Google IDs. Thus, a target group may contain 1000 customers or visitors, but perhaps only 500 would be added to the User List for that target group’s campaign.
 
