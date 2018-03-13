@@ -1,3 +1,12 @@
+- **Setup**
+	- [Getting Started](#getting-started) 
+	- [Enabling GDN with Optimove SDK](#enabling) 
+	- [Approving Optimove as a User List Provider](#approve) 
+	- [Getting your AdWords/DBM Account Details](#google-customerid) 
+- **Post-Setup**
+	- [Create User Lists](#create-user) 
+	- [Schedule Your First Google Display Network Campaign](#first-campaign) 
+	- [Set up the Campaign in Google](#google-campaign) 
 
 Google Display Network is a collection of websites, including specific Google websites like Google Finance, Gmail, Blogger and YouTube, which show AdWords ads. Using either a DoubleClick Bid Manager (DBM) account or an AdWords account with an account manager, you can target “User Lists” of specific users for particular AdWords campaigns, matched by their Google IDs.
 
@@ -7,10 +16,10 @@ Optimove addresses both of these challenges as part of its core functions: the s
 
 ----------
 
-## **Getting Started**
+## <a id="getting-started"></a>Getting Started
 To use Google Display Network as a campaign channel within Optimove, you need to perform the following steps:
 
-### **Enabling GDN with Optimove SDK**
+### <a id="enabling"></a>Enabling GDN with Optimove SDK
 In order to use Optimove to automate AdWords campaigns, you need to link, or "match," Google Customer IDs with Optimove Customer IDs and/or Visitor IDs using [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide). Just follow the steps below to get started:
 
 1. Request [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) from your CSM or Optimove point of contact and send them the following information:
@@ -20,7 +29,7 @@ In order to use Optimove to automate AdWords campaigns, you need to link, or "ma
 4. Add the [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) to your code with the details the Product Integration team sent you
 5. Call `optimoveSDK.initialize()` function to initialize the SDK
 6. Call `optimoveSDK.API.setPageVisit()` function to report page visits
-7. Call `optimoveSDK.API.setUserID()` in order to link/stitch visitor to customerID for Optimove campaigns
+7. Call `optimoveSDK.API.setUserId()` in order to link/stitch visitor to customerID for Optimove campaigns
 
 **Note**:
 * Use the [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) guide to see detailed information on the above functions
@@ -34,7 +43,7 @@ In order to use Optimove to automate AdWords campaigns, you need to link, or "ma
 
 ----------
 
-### **Approving Optimove as a User List Provider**
+### <a id="approve"></a>Approving Optimove as a User List Provider
 To get started, Optimove must be approved as a User List Provider in your AdWords or DBM account with one of the following permission types:
 
 * INVITE_ADVERTISER – User List Provider for a specific brand in your DBM account
@@ -45,16 +54,20 @@ In order to approve Optimove as a User List Provider with one of the above permi
 
 Once this request is passed on to Google, they will connect the Optimove account to your AdWords or DBM account, so that Optimove will be able to create new User Lists and to populate them with customer or visitor IDs.
 
-### **Getting your AdWords/DBM Account Details**
+### <a id="google-customerid"></a>Getting your AdWords/DBM Account Details
 In order to connect your Optimove site to the relevant Google account, you need to provide the following information (which Google will provide you) to the Optimove Product Integration team:
 * The ClientCustomerID for the Google DMP User List API
 * The type of User List Provider assigned to Optimove by Google
 Note: If you wish to use multiple Google accounts with Optimove, you will need to provide to the Optimove Product Integration team the ClientCustomerID and User List Provider type for each account.
 
-### **Create User Lists**
+
+----------
+
+
+### <a id="create-user"></a>Create User Lists
 Optimove will automatically create a set of preconfigured User Lists in your connected AdWords or DBM account. If you require the creation of additional User Lists, contact the Optimove integration team. Note that User Lists become active approximately 24 hours after creation.
 
-### **Schedule Your First Google Display Network Campaign**
+### <a id="first-campaign"></a>Schedule Your First Google Display Network Campaign
 Once the above steps have been completed, you are ready to run your first Google Display Network campaign: select the “Google Display Network” channel when scheduling a campaign and select the appropriate User List from the drop-down list that appears. In the next step, you will need to associate the User List you selected here with a relevant campaign.
 ![Schedule Your First Google Display Network Campaign](https://docs.optimove.com/wp-content/uploads/2017/03/word-image-37.png)
 
@@ -64,5 +77,5 @@ Note that Optimove will only populate the User List with IDs that were already m
 
 Note also that Google requires a minimum of 300 IDs in order for a User List to become active. You can associate one Google User List with more than one Optimove campaign in order to reach the 300-customer/visitor threshold, although, of course, all the associated Optimove campaigns will result in the single Google campaign run to that list.
 
-### **Set up the Campaign in Google**
+### <a id="google-campaign"></a>Set up the Campaign in Google
 After the campaign is scheduled within Optimove, use the Google AdWords or DBM client to create the desired campaign for the User List populated by Optimove.
