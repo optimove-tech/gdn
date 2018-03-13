@@ -1,5 +1,5 @@
+- [Introduction](#intro)
 - **Setup**
-	- [Getting Started](#getting-started) 
 	- [Enabling GDN with Optimove SDK](#enabling) 
 	- [Approving Optimove as a User List Provider](#approve) 
 	- [Getting your AdWords/DBM Account Details](#google-customerid) 
@@ -71,7 +71,7 @@ Optimove will automatically create a set of preconfigured User Lists in your con
 Once the above steps have been completed, you are ready to run your first Google Display Network campaign: select the “Google Display Network” channel when scheduling a campaign and select the appropriate User List from the drop-down list that appears. In the next step, you will need to associate the User List you selected here with a relevant campaign.
 ![Schedule Your First Google Display Network Campaign](https://docs.optimove.com/wp-content/uploads/2017/03/word-image-37.png)
 
-From this point on, Optimove will automatically populate the selected Google User List with the customer or visitor IDs included in the selected target group, updated daily. When the campaign’s measurement period concludes, Optimove will remove all IDs from the list.
+<a id="intro"></a>From this point on, Optimove will automatically populate the selected Google User List with the customer or visitor IDs included in the selected target group, updated daily. When the campaign’s measurement period concludes, Optimove will remove all IDs from the list.
 
 Note that Optimove will only populate the User List with IDs that were already matched, by the above script, with Google IDs. Thus, a target group may contain 1000 customers or visitors, but perhaps only 500 would be added to the User List for that target group’s campaign.
 
