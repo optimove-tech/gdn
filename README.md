@@ -4,7 +4,7 @@
 	- [Approving Optimove as a User List Provider](#approve) 
 	- [Getting your AdWords/DBM Account Details](#google-customerid) 
 - **Post-Setup**
-	- [Create User Lists](#create-user) 
+	- [Create Customer/User Lists](#create-user) 
 	- [Schedule Your First Google Display Network Campaign](#first-campaign) 
 	- [Set up the Campaign in Google](#google-campaign) 
 
@@ -23,8 +23,9 @@ To use Google Display Network as a campaign channel within Optimove, you need to
 In order to use Optimove to automate AdWords campaigns, you need to link, or "match," Google Customer IDs with Optimove Customer IDs and/or Visitor IDs using [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide). Just follow the steps below to get started:
 
 1. Request [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) from your CSM or Optimove point of contact and send them the following information:
-	<br/>1.2. Approving Optimove as a User List Provider (See below)
+	<br/>1.2. Approving Optimove as a User List Provider (see below)
 	<br/>1.3. Getting your AdWords/DBM Account Details (see below)
+	<br/>1.3. Send Optimove the user/customer list you want to populate for creating campaigns (see below)
 3. Once the Product Integration team receives the request with #1 details above, they will send you your SDK details for implementation
 4. Add the [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) to your code with the details the Product Integration team sent you
 5. Call `optimoveSDK.initialize()` function to initialize the SDK
@@ -64,18 +65,20 @@ Note: If you wish to use multiple Google accounts with Optimove, you will need t
 ----------
 
 
-### <a id="create-user"></a>Create User Lists
-Optimove will automatically create a set of preconfigured User Lists in your connected AdWords or DBM account. If you require the creation of additional User Lists, contact the Optimove integration team. Note that User Lists become active approximately 24 hours after creation.
+### <a id="create-user"></a>Create Customer/User Lists
+Once Optimove receives your Customer/User list(s), will automatically create a set of preconfigured Customer Lists in your connected AdWords or DBM account. 
+If you require the creation of additional Customer/User Lists, contact the Optimove Product Integration team. 
+**Note:** Customer Lists become active approximately 24 hours after creation.
 
 ### <a id="first-campaign"></a>Schedule Your First Google Display Network Campaign
-Once the above steps have been completed, you are ready to run your first Google Display Network campaign: select the “Google Display Network” channel when scheduling a campaign and select the appropriate User List from the drop-down list that appears. In the next step, you will need to associate the User List you selected here with a relevant campaign.
+Once the above steps have been completed, you are ready to run your first Google Display Network campaign: select the “Google Display Network” channel when scheduling a campaign and select the appropriate Customer/User List from the drop-down list that appears. In the next step, you will need to associate the Customer/User List you selected here with a relevant campaign.
 ![Schedule Your First Google Display Network Campaign](https://docs.optimove.com/wp-content/uploads/2017/03/word-image-37.png)
 
-From this point on, Optimove will automatically populate the selected Google User List with the customer or visitor IDs included in the selected target group, updated daily. When the campaign’s measurement period concludes, Optimove will remove all IDs from the list.
+From this point on, Optimove will automatically populate the selected Google Customer/User List with the customer or visitor IDs included in the selected target group, updated daily. When the campaign’s measurement period concludes, Optimove will remove all IDs from the list.
 
-Note that Optimove will only populate the User List with IDs that were already matched, by the above script, with Google IDs. Thus, a target group may contain 1000 customers or visitors, but perhaps only 500 would be added to the User List for that target group’s campaign.
+Note that Optimove will only populate the Customer/User List with IDs that were already matched, by the above script, with Google IDs. Thus, a target group may contain 1000 customers or visitors, but perhaps only 500 would be added to the Customer/User List for that target group’s campaign.
 
-Note also that Google requires a minimum of 300 IDs in order for a User List to become active. You can associate one Google User List with more than one Optimove campaign in order to reach the 300-customer/visitor threshold, although, of course, all the associated Optimove campaigns will result in the single Google campaign run to that list.
+Note also that Google requires a minimum of 300 IDs in order for a Customer/User List to become active. You can associate one Google Customer/User List with more than one Optimove campaign in order to reach the 300-customer/visitor threshold, although, of course, all the associated Optimove campaigns will result in the single Google campaign run to that list.
 
 ### <a id="google-campaign"></a>Set up the Campaign in Google
-After the campaign is scheduled within Optimove, use the Google AdWords or DBM client to create the desired campaign for the User List populated by Optimove.
+After the campaign is scheduled within Optimove, use the Google AdWords or DBM client to create the desired campaign for the Customer/User List populated by Optimove.
