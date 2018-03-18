@@ -34,7 +34,7 @@ In order to use Optimove to automate AdWords campaigns, you need to link, or "ma
 
 **Note**:
 * Use the [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) guide to see detailed information on the above functions
-* Optimove SDK supports both [Web](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) 
+* Optimove GDN supports [Web](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide)  only
 * Cookie matching for website visitors (non-registered users/customers) is only available if you implement [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide).
 
 **Technical explanation**
