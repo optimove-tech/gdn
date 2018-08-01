@@ -20,22 +20,22 @@ Optimove addresses both of these challenges as part of its core functions: the s
 To use Google Display Network as a campaign channel within Optimove, you need to perform the following steps:
 
 ### <a id="enabling"></a>Enabling GDN with Optimove SDK
-In order to use Optimove to automate AdWords campaigns, you need to link, or "match," Google Customer IDs with Optimove Customer IDs and/or Visitor IDs using [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide). Just follow the steps below to get started:
+In order to use Optimove to automate AdWords campaigns, you need to link, or "match," Google Customer IDs with Optimove Customer IDs and/or Visitor IDs using [Web SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide). Just follow the steps below to get started:
 
-1. Request [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) from your CSM or Optimove point of contact and send them the following information:
+1. Request [Web SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) from your CSM or Optimove point of contact and send them the following information:
 	<br/>1.2. Approving Optimove as a User List Provider (see below)
 	<br/>1.3. Getting your AdWords/DBM Account Details (see below)
 	<br/>1.3. Send Optimove the user/customer list you want to populate for creating campaigns (see below)
 3. Once the Product Integration team receives the request with #1 details above, they will send you your SDK details for implementation
-4. Add the [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) to your code with the details the Product Integration team sent you
+4. Add the [Web SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) to your code with the details the Product Integration team sent you
 5. Call `optimoveSDK.initialize()` function to initialize the SDK
 6. Call `optimoveSDK.API.setPageVisit()` function to report page visits
 7. Call `optimoveSDK.API.setUserId()` in order to link/stitch visitor to customerID for Optimove campaigns
 
 **Note**:
-* Use the [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) guide to see detailed information on the above functions
+* Use the [Web SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide) guide to see detailed information on the above functions
 * Optimove GDN support is done via Optimove [Web](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide)  SDK only
-* Cookie matching for website visitors (non-registered users/customers) is only available if you implement [Optimove SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide).
+* Cookie matching for website visitors (non-registered users/customers) is only available if you implement [Web SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide).
 
 **Technical explanation**
 * The functions above sets a cookie for each site visitor containing your Customer ID or Visitor ID, under the Google Cookie Matching service domain. 
