@@ -1,14 +1,9 @@
-**Setup**
+### Setup
 - [Requesting Optimove Web SDK](#requesting) 
 - [Add GDN related functions](#add-functions) 
+### Reference
+- [Optimove-Google Display Network Integration](https://docs.optimove.com/google-display-network-integration/)
 
-**Reference**
-[Optimove-Google Display Network Integration](https://docs.optimove.com/google-display-network-integration/)
-
-<hr>
-
-### <a id="intro"></a>
-In addition to request relevant information from Google, you will require to implement [Optimove's Web SDK](https://github.com/optimoveproductintegration/Web-SDK-Integration-Guide). Follow the steps below to get started:
 <hr>
 
 ### <a id="requesting"></a>Requesting Optimove Web SDK
